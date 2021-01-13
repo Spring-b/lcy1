@@ -1,0 +1,20 @@
+.layui-card {
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 0 10px 3px #ccc;
+}
+.layui-card .catagory button {
+  float: right;
+}
+.option {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 3;
+  bottom: 0;
+  display: none;
+  margin: auto;
+  width: 450px;
+  height: 300px;
+}

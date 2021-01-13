@@ -1,0 +1,43 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #48a0f8;
+}
+body img {
+  margin: 15px 200px 0;
+}
+.login {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 310px;
+  box-shadow: 3px 3px 10px 3px #000;
+  background-color: #fadb66;
+}
+.login .title {
+  text-align: center;
+  font-size: 27px;
+  padding: 10px 20px;
+}
+.login form .layui-form-item {
+  padding: 0 20px;
+  position: relative;
+}
+.login form .layui-form-item i {
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.login form .layui-form-item input {
+  padding: 0 30px;
+  width: 350px;
+}
+.login form .layui-form-item button {
+  width: 350px;
+}
+.login form a {
+  float: right;
+}

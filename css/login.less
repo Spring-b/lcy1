@@ -1,0 +1,59 @@
+body {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-color: #48a0f8;
+
+    img {
+        margin: 15px 200px 0;
+    }
+}
+
+.login {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 310px;
+    // margin: 0 auto;
+    box-shadow: 3px 3px 10px 3px #000;
+    // border: 1px solid black;
+    background-color: #fadb66;
+
+    .title {
+        text-align: center;
+        font-size: 27px;
+        padding: 10px 20px;
+    }
+
+    form {
+        .layui-form-item {
+            padding: 0 20px;
+            position: relative;
+
+            i {
+                position: absolute;
+                left: 30px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            input {
+                padding: 0 30px;
+                width: 350px;
+            }
+
+            button {
+                width: 350px;
+            }
+        }
+
+        a {
+            float: right;
+        }
+    }
+}
