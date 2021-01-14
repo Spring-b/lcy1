@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<!-- 这是分类管理是 -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文章管理</title>
+    <link rel="stylesheet" href="../lib/layui/css/layui.css">
+    <link rel="stylesheet" href="../css/basic.css">
+    <link rel="stylesheet" href="../css/article_gl.css">
+</head>
+
+<body>
+    <div class="layui-card">
+        <div class="layui-card-header catagory">类别管理
+            <button type="button" class="layui-btn layui-btn-sm layui-btn-normal button">添加类别</button>
+        </div>
+        <div class="layui-card-body">
+            <table class="layui-table count">
+                <colgroup>
+                    <col width="500">
+                    <col width="500">
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>分类名称</th>
+                        <th>分类别名</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>贤心</td>
+                        <td>2016-11-29</td>
+                        <td>
+                            <button type="button" class="layui-btn layui-btn-xs layui-btn-primary exit">编辑</button>
+                            <button type="button" class="layui-btn layui-btn-xs layui-btn-danger del">删除</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<script type="text/html" id="eye">
+        <form action="" class="layui-form"  style="margin: 15px 30px 0 0 ;">
+          <div class="layui-form-item">
+              <label class="layui-form-label">分类名称</label>
+              <div class="layui-input-block">
+                  <input type="text" name="name" required lay-verify="required" placeholder="请输入名称"
+                      autocomplete="off" class="layui-input">
+              </div>
+          </div>
+          <div class="layui-form-item">
+              <label class="layui-form-label">分类别名</label>
+              <div class="layui-input-block">
+                  <input type="text" name="alias" required lay-verify="required" placeholder="请输入别名"
+                      autocomplete="off" class="layui-input">
+              </div>
+          </div>
+          <div class="layui-form-item">
+              <div class="layui-input-block">
+                  <button class="layui-btn add" lay-submit lay-filter="formDemo">立即添加</button>
+                  <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+              </div>
+          </div>
+        </form>
+</script>
+<script type="text/html" id="exit">
+        <form action="" class="layui-form"  style="margin: 15px 30px 0 0 ;">
+          <div class="layui-form-item">
+              <label class="layui-form-label">分类名称</label>
+              <div class="layui-input-block">
+                  <input type="text" name="name" required lay-verify="required" placeholder="请输入名称"
+                      autocomplete="off" class="layui-input">
+              </div>
+          </div>
+          <div class="layui-form-item">
+              <label class="layui-form-label">分类别名</label>
+              <div class="layui-input-block">
+                  <input type="text" name="alias" required lay-verify="required" placeholder="请输入别名"
+                      autocomplete="off" class="layui-input">
+              </div>
+          </div>
+                  <input type="hidden" name="id" >
+          <div class="layui-form-item">
+              <div class="layui-input-block">
+                  <button class="layui-btn add" lay-submit lay-filter="formDemo">立即修改</button>
+                  <!-- <button type="reset" class="layui-btn layui-btn-primary">重置</button> -->
+              </div>
+          </div>
+        </form>
+</script>
+<script type='text/html' id="tpl-list">
+   {{each data item}}
+   <tr>
+    <td>{{item.name}}</td>
+    <td>{{item.alias}}</td>
+    <td>
+        <button type="button"  data-id="{{item.id}}" data-name="{{item.name}}" data-alias="{{item.alias}}" class="layui-btn layui-btn-xs layui-btn-primary exit">编辑</button>
+        <button type="button" data-id="{{item.id}}" class="layui-btn layui-btn-xs layui-btn-danger del" >删除</button>
+    </td>
+</tr>
+   {{/each}}
+</script>
+<script src="../lib/layui/layui.all.js"></script>
+<script src="../lib/jquery.js"></script>
+<script src="../lib/template-web.js"></script>
+<script src="../js/article_gl.js"></script>
+
+</html>
